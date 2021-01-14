@@ -18,9 +18,10 @@ services:
     depends_on:
       - mysql
 
-  volumes:
-    database:
-    django:
+#notes
+  #volumes:
+  #  database:
+  #  django:
 
   #version: "3.9"
   #service:
