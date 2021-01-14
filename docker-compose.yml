@@ -8,7 +8,7 @@ services:
     ports:
       - "3306:3306"
 
-    web:
+  web:
     build: .
     command: python manage.py runserver 0.0.0.0:8000
     volumes:
@@ -17,7 +17,7 @@ services:
       - "8000:8000"
     depends_on:
       - mysql
-      
+
   volumes:
     database:
     django:
