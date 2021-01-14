@@ -1,0 +1,38 @@
+version: "3.9"
+services:
+
+  mysql:
+    image: mysql
+    environment:
+      MYSQL_ALLOW_EMPTY_PASSWORD: 'yes'
+    ports:
+      - "3306:3306"
+
+  #service:
+  #
+  #  service-1:
+  #  image:
+  #  ports:
+  #  -  8080:8080
+  #  networks:
+  #  -  frontend
+  #  volumes:
+  #  -
+  #  environment:
+  #  -
+  #
+  #  service-2:
+  #  image:
+  #  ports:
+  #  -  8080:8080
+  #  networks:
+  #  -
+  #  volumes:
+  #  -
+  #  environment:
+  #  -
+  #
+  #networks:
+  #  e.g.frontend:
+  #volumes:
+  #  e.g.database:
