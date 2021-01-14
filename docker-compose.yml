@@ -8,6 +8,11 @@ services:
     ports:
       - "3306:3306"
 
+  volumes:
+    database:
+    django:
+
+  #version: "3.9"
   #service:
   #
   #  service-1:
