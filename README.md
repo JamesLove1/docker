@@ -1,7 +1,4 @@
-# docker
-
-# I managed to clone the repositry!  
-# Followed by uploding it to my laptop
-# Test
+#Project Django
 #
-#
+# Django Installed
+# MySQL Installed
