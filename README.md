@@ -1,4 +1,5 @@
 Project Django
 
-# Django Installed
-# MySQL Installed
+Django Installed
+
+MySQL Installed
