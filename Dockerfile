@@ -4,14 +4,23 @@ FROM ubuntu:18.04
 RUN sudo apt update
 RUN sudo apt install python3.8
 RUN python ––version
+RUN sudo apt install python3-pip
 
 # Django install & set-up
-RUN
-RUN
+RUN apt install python3-django
+RUN cd /
+RUN mkdir django
+RUN cd django
+RUN pip install django
+RUN django-admin --version
+#Start Django Project
+RUN django-admin startproject myDjangoProject .
+RUN python manage.py runserver your_server_ip:8000
 
 # Web Service Gateway Interface Gunicorn install & set-up
-RUN
-RUN
+RUN  sudo apt-get update
+RUN  sudo apt-get install gunicorn
+
 
 ## Notes !!!!!
 #follow up on the below
