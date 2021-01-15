@@ -13,6 +13,12 @@ RUN
 RUN
 RUN
 
+## Notes !!!!!
+#follow up on the below
+#https://docs.docker.com/engine/reference/builder/#run
+#https://gunicorn.org/#quickstart
+
+#old inputs for this dockerfile
 #ENV PYTHONUNBUFFERED=1
 #WORKDIR /code
 #COPY requirements.txt /code/
