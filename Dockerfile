@@ -3,8 +3,7 @@ FROM ubuntu:18.04
 WORKDIR /django
 #COPY pip-packages.txt /django/
 
-# Web Service Gateway Interface Gunicorn install & set-up
-RUN  apt-get install gunicorn -y
+
 
 # Python install & set-up
 RUN apt update
@@ -22,7 +21,8 @@ CMD cd /myapp
 CMD ls -l
 CMD python manage.py runserver 0.0.0.0:8000
 
-
+# Web Service Gateway Interface Gunicorn install & set-up
+#RUN  apt-get install gunicorn -y
 
 
 ## Notes !!!!!
