@@ -1,14 +1,16 @@
 FROM ubuntu:18.04
 
+WORKDIR /django
+
 # Python install & set-up
 RUN apt update
 RUN apt install python3.8 -y
 RUN apt install python3-pip -y
-RUN pip install --upgrade pip
-RUN pip install Django
+RUN pip3 install --upgrade pip
+RUN pip3 install -r requirements.txt
+
 
 # Django install & set-up
-WORKDIR /django
 COPY pip-packages.txt /django/
 RUN pip install -r pip-packages.txt
 COPY . /django/
