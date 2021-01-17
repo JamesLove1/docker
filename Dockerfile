@@ -4,7 +4,7 @@ WORKDIR /django
 #COPY pip-packages.txt /django/
 
 # Web Service Gateway Interface Gunicorn install & set-up
-RUN  apt-get install gunicorn -y -d
+RUN  apt-get install gunicorn -y
 
 # Python install & set-up
 RUN apt update
