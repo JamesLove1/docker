@@ -18,7 +18,6 @@ CMD ls -l
 CMD python manage.py runserver 0.0.0.0:8000
 
 # Web Service Gateway Interface Gunicorn install & set-up
-RUN  apt-get update
 RUN  apt-get install gunicorn -y
 
 
