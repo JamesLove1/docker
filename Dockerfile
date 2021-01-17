@@ -11,7 +11,7 @@ RUN pip3 install --upgrade pip
 RUN pip3 install -r pip-packages.txt
 
 #Creat Django App & start test server
-WORKDIR /django/projects
+#WORKDIR /django/projects
 CMD django-admin startproject myapp
 CMD cd /myapp
 CMD ls -l
