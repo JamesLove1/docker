@@ -22,8 +22,8 @@ services:
   web:
     image: nginx
     volumes:
-     - ./:/etc/nginx/templates
-#     - ./nginx:/etc/nginx/templates
+#     - ./:/etc/nginx/templates
+     - ./nginx:/etc/nginx/templates
 #     - .nginx/:/etc/nginx/templates
 #     - /etc/nginx/templates:./
     ports:

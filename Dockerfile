@@ -5,7 +5,7 @@ WORKDIR /django
 # Python install & set-up
 RUN apt update
 RUN apt install python3.8 -y
-#RUN apt install python3-pip -y
+RUN apt install python3-pip -y
 #RUN pip3 install --upgrade pip
 #RUN pip3 install Django
 #RUN ls -l
