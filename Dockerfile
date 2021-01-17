@@ -3,15 +3,16 @@ FROM ubuntu:18.04
 # Python install & set-up
 RUN apt update
 RUN apt install python3.8 -y
-#RUN python ––version
+RUN python ––version
 RUN apt install python3-pip -y
+RUN pip3 --version
 
 # Django install & set-up
 RUN cd /
 RUN mkdir django
 RUN cd django
 
-RUN python -m pip install Django
+RUN python pip install Django
 RUN pip install psycopg2-binary>=2.8
 
 RUN django-admin startproject myDjangoProject .
