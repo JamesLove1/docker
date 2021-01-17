@@ -11,7 +11,7 @@ RUN cd /
 RUN mkdir django
 RUN cd django
 
-RUN pip install Django>=3.0,<4.0
+RUN python -m pip install Django
 RUN pip install psycopg2-binary>=2.8
 
 RUN django-admin startproject myDjangoProject .
