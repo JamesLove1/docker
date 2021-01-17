@@ -3,9 +3,7 @@ FROM ubuntu:18.04
 # Python install & set-up
 RUN apt update
 RUN apt install python3.8 -y
-RUN python ––version
 RUN apt install python3-pip -y
-RUN pip3 --version
 
 # Django install & set-up
 RUN cd /
@@ -19,7 +17,6 @@ RUN django-admin startproject myDjangoProject .
 RUN python manage.py runserver your_server_ip:8000
 
 #RUN apt install python3-django -y
-#RUN django-admin --version
 #Start Django Project
 
 
