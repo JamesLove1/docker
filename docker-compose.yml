@@ -12,8 +12,8 @@ services:
     build: .
 #    command: python manage.py runserver 0.0.0.0:8000
     volumes:
-      - ./:/code
-      - ./docker:/django
+#      - ./:/code
+      - ./django-ubuntu:./
     ports:
       - "8000:8000"
     depends_on:
@@ -22,10 +22,7 @@ services:
   web:
     image: nginx
     volumes:
-#     - ./:/etc/nginx/templates
      - ./nginx:/etc/nginx/templates
-#     - .nginx/:/etc/nginx/templates
-#     - /etc/nginx/templates:./
     ports:
      - "82:8080"
     environment:
