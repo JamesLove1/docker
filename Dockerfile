@@ -9,6 +9,7 @@ RUN apt install python3.8 -y
 RUN apt install python3-pip -y
 RUN pip3 install --upgrade pip
 RUN pip3 install -r pip-packages.txt
+RUN ls -l
 
 #Creat Django App & start test server
 #WORKDIR /django/projects
