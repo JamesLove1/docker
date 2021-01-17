@@ -14,6 +14,8 @@ RUN pip3 install -r pip-packages.txt
 RUN  apt-get update
 RUN  apt-get install gunicorn -y
 
+CMD python manage.py runserver 0.0.0.0:8000
+
 ## Notes !!!!!
 #follow up on the below
 #https://docs.docker.com/engine/reference/builder/#run
