@@ -9,6 +9,7 @@ RUN apt install python3-pip -y
 WORKDIR /django
 COPY pip-packages.txt /django/
 RUN pip install -r pip-packages.txt
+COPY . /code/
 
 RUN django-admin startproject myDjangoProject .
 RUN python manage.py runserver your_server_ip:8000
