@@ -7,13 +7,13 @@ services:
       MYSQL_ALLOW_EMPTY_PASSWORD: 'yes'
     ports:
       - 3306:3306
+      
   ubuntu:
     build: .
     command: python manage.py runserver 0.0.0.0:8000
     volumes:
       - .:/code
-      - django:/django
-      - docker:/django 
+      - docker:/django
     ports:
       - "8000:8000"
     depends_on:
