@@ -4,6 +4,7 @@ FROM ubuntu:18.04
 RUN apt update
 RUN apt install python3.8 -y
 RUN apt install python3-pip -y
+RUN pip install Django
 
 # Django install & set-up
 WORKDIR /django
