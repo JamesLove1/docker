@@ -9,12 +9,13 @@ RUN apt install python3.8 -y
 RUN apt install python3-pip -y
 RUN pip3 install --upgrade pip
 RUN pip3 install -r pip-packages.txt
+CMD python manage.py runserver 0.0.0.0:8000
 
 # Web Service Gateway Interface Gunicorn install & set-up
 RUN  apt-get update
 RUN  apt-get install gunicorn -y
 
-CMD python manage.py runserver 0.0.0.0:8000
+
 
 ## Notes !!!!!
 #follow up on the below
