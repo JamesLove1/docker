@@ -1,7 +1,7 @@
 FROM ubuntu:18.04
 
 WORKDIR /django
-COPY pip-packages.txt /django/
+#COPY pip-packages.txt /django/
 
 # Web Service Gateway Interface Gunicorn install & set-up
 RUN  apt-get install gunicorn -y -d
@@ -11,7 +11,8 @@ RUN apt update
 RUN apt install python3.8 -y
 RUN apt install python3-pip -y
 RUN pip3 install --upgrade pip
-RUN pip3 install -r pip-packages.txt
+RUN pip3 install Django
+#RUN pip3 install -r pip-packages.txt
 RUN ls -l
 
 #Creat Django App & start test server
