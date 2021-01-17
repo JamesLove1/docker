@@ -10,11 +10,19 @@ RUN apt install python3-pip -y
 RUN cd /
 RUN mkdir django
 RUN cd django
-RUN apt install python3-django -y
-RUN django-admin --version
-#Start Django Project
+
+RUN pip install Django>=3.0,<4.0
+RUN pip install psycopg2-binary>=2.8
+
 RUN django-admin startproject myDjangoProject .
 RUN python manage.py runserver your_server_ip:8000
+
+#RUN apt install python3-django -y
+#RUN django-admin --version
+#Start Django Project
+
+
+
 
 # Web Service Gateway Interface Gunicorn install & set-up
 RUN  apt-get update
