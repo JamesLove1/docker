@@ -7,11 +7,10 @@ RUN apt install python3.8 -y
 RUN apt install python3-pip -y
 
 # Django install & set-up
-RUN apt install python3-django -y
 RUN cd /
 RUN mkdir django
 RUN cd django
-RUN pip install django
+RUN apt install python3-django -y
 RUN django-admin --version
 #Start Django Project
 RUN django-admin startproject myDjangoProject .
