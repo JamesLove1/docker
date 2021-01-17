@@ -1,6 +1,6 @@
 FROM ubuntu:18.04
 
-WORKDIR /django
+#WORKDIR /django
 
 FROM python:3
 ENV PYTHONUNBUFFERED=1
