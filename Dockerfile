@@ -3,7 +3,7 @@ FROM ubuntu:18.04
 WORKDIR /django
 
 # Python install & set-up
-RUN apt update
+RUN apt-get update
 RUN apt-get install python3.8 -y
 RUN apt-get install python3-pip -y
 RUN pip3 install --upgrade pip
