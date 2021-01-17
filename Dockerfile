@@ -6,12 +6,9 @@ RUN apt install python3.8 -y
 RUN apt install python3-pip -y
 
 # Django install & set-up
-RUN cd /
-RUN mkdir django
-RUN cd django
-
-RUN python pip install Django
-RUN pip install psycopg2-binary>=2.8
+WORKDIR /django
+COPY pip-packages.txt /django/
+RUN pip install -r pip-packages.txt
 
 RUN django-admin startproject myDjangoProject .
 RUN python manage.py runserver your_server_ip:8000
