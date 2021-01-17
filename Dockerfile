@@ -7,7 +7,7 @@ RUN apt install python3.8 -y
 RUN apt install python3-pip -y
 
 # Django install & set-up
-RUN apt install python3-django
+RUN apt install python3-django -y
 RUN cd /
 RUN mkdir django
 RUN cd django
@@ -19,7 +19,7 @@ RUN python manage.py runserver your_server_ip:8000
 
 # Web Service Gateway Interface Gunicorn install & set-up
 RUN  apt-get update
-RUN  apt-get install gunicorn
+RUN  apt-get install gunicorn -y
 
 
 ## Notes !!!!!
