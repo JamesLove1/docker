@@ -10,20 +10,8 @@ RUN apt install python3-pip -y
 RUN pip3 install --upgrade pip
 RUN pip3 install -r pip-packages.txt
 
-
-# Django install & set-up
-COPY pip-packages.txt /django/
-RUN pip install -r pip-packages.txt
-COPY . /django/
-
-RUN django-admin startproject myDjangoProject .
-RUN python manage.py runserver your_server_ip:8000
-
-#RUN apt install python3-django -y
-#Start Django Project
-
-
-
+#Django Run of Service Start
+CMD python manage.py runserver your_server_ip:8000
 
 # Web Service Gateway Interface Gunicorn install & set-up
 RUN  apt-get update
