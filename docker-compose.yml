@@ -8,7 +8,7 @@ services:
     ports:
       - "3306:3306"
 
-  Ubuntu:
+  ubuntu:
     build: .
     command: python manage.py runserver 0.0.0.0:8000
     volumes:
