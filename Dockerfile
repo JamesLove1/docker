@@ -2,7 +2,7 @@ FROM ubuntu:18.04
 
 # Python install & set-up
 RUN apt update
-RUN apt install python3.8
+RUN apt install python3.8 -y
 RUN python ––version
 RUN sudo apt install python3-pip
 
