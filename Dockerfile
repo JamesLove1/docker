@@ -13,7 +13,7 @@ RUN pip3 install Django
 #Creat Django App & start test servercd
 RUN django-admin startproject myapp
 WORKDIR /django/myapp
-RUN chmod 777 manage.py
+RUN chmod +x manage.py.
 
 #CMD ["python3 manage.py runserver 0.0.0.0:8000"]
 
