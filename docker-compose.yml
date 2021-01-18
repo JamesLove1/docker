@@ -12,7 +12,7 @@ services:
   ubuntu:
     build: .
     container_name: Django
-#    command: python3 manage.py runserver 0.0.0.0:8000
+#      command: python3 manage.py runserver 0.0.0.0:8000
     volumes:
 #      - ./:/code
       - ./django:/django
@@ -20,7 +20,6 @@ services:
       - "8000:8000"
     depends_on:
       - mysql
-    tty: true
 
   web:
     image: nginx
