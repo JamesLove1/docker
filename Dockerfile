@@ -15,8 +15,10 @@ RUN django-admin startproject myapp
 WORKDIR /django/myapp
 RUN chmod +x manage.py
 RUN python3 manage.py migrate
+COPY .djngo.txt
+RUN chmod +x django.txt
 
-CMD ["python3 ./manage.py runserver 0.0.0.0:8000"]
+CMD ["/django.txt"]
 
 
 
