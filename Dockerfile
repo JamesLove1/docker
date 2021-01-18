@@ -9,7 +9,7 @@ RUN apt install nano
 RUN pip3 install Django
 RUN django-admin startproject myapp
 
-WORDIR /myapp
+WORKDIR /myapp
 
 #RUN chmod +x manage.py
 #RUN python3 manage.py migrate
