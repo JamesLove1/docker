@@ -14,7 +14,7 @@ services:
     container_name: Django
     command: python3 ./manage.py runserver 0.0.0.0:8000
     volumes:
-      - ./django:/django
+      - ./django:/myapp 
     ports:
       - 9000:8000
     depends_on:
