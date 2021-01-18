@@ -15,7 +15,7 @@ RUN django-admin startproject myapp
 WORKDIR /django/myapp
 RUN chmod 777 manage.py
 
-#CMD ["python3 manage.py runserver 0.0.0.0:8000"]
+CMD ["python3 manage.py runserver 0.0.0.0:8000"]
 
 
 
