@@ -13,7 +13,7 @@ RUN pip3 install Django
 RUN django-admin startproject myapp
 WORKDIR /django/myapp
 
-#CMD ["/django/myapp", "python manage.py runserver 0.0.0.0:8000"]
+#CMD ["python manage.py runserver 0.0.0.0:8000"]
 
 # Web Service Gateway Interface Gunicorn install & set-up
 #RUN  apt-get install gunicorn -y
