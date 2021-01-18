@@ -7,15 +7,12 @@ RUN apt install python3-pip -y
 RUN pip3 install --upgrade pip
 RUN apt install nano
 RUN pip3 install Django
-
-WORKDIR /django
-
-#Creat Django App & start test server
 RUN django-admin startproject myapp
-#WORDIR /django/myapp
+
+WORDIR /myapp
+
 #RUN chmod +x manage.py
 #RUN python3 manage.py migrate
-
 #CMD ["python3 myapp/manage.py runserver 0.0.0.0:8000"]
 
 #ADD django.txt ./
