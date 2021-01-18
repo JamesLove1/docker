@@ -7,7 +7,7 @@ RUN apt update
 RUN apt install python3.8 -y
 RUN apt install python3-pip -y
 RUN pip3 install --upgrade pip
-#RUN pip3 install Django
+RUN pip3 install Django
 #RUN ls -l
 
 #Creat Django App & start test servercd
