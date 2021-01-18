@@ -16,7 +16,7 @@ services:
     volumes:
       - ./django:/django
     ports:
-      - 8000:8000
+      - 9000:8000
     depends_on:
       - mysql
 
@@ -26,7 +26,7 @@ services:
     volumes:
      - ./nginx:/etc/nginx/
     ports:
-     - 9000:8080
+     - 80:8080
     environment:
      - NGINX_HOST=foobar.com
      - NGINX_PORT=80
