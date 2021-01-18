@@ -1,7 +1,5 @@
 FROM ubuntu:18.04
 
-WORKDIR /django
-
 # Python install & set-up
 RUN apt update
 RUN apt install python3.8 -y
@@ -10,13 +8,15 @@ RUN pip3 install --upgrade pip
 RUN apt install nano
 RUN pip3 install Django
 
-#Creat Django App & start test servercd
+WORKDIR /django
+
+#Creat Django App & start test server
 RUN django-admin startproject myapp
-#WORKDIR /django/myapp
+#WORDIR /django/myapp
 #RUN chmod +x manage.py
 #RUN python3 manage.py migrate
 
-CMD ["python3 .myapp/manage.py runserver 0.0.0.0:8000"]
+CMD ["python3 myapp/manage.py runserver 0.0.0.0:8000"]
 
 #ADD django.txt ./
 #RUN chmod +x ./django.txt
