@@ -3,6 +3,7 @@ services:
 
   mysql:
     image: mysql
+    container_name: MySQL Database
     environment:
       MYSQL_ALLOW_EMPTY_PASSWORD: 'yes'
     ports:
@@ -10,7 +11,8 @@ services:
 
   ubuntu:
     build: .
-    command: python manage.py runserver 0.0.0.0:8000
+    container_name: Django
+#    command: python manage.py runserver 0.0.0.0:8000
     volumes:
 #      - ./:/code
       - ./django:/django
@@ -18,9 +20,11 @@ services:
       - "8000:8000"
     depends_on:
       - mysql
+    tty: true
 
   web:
     image: nginx
+    container_name: Web_Server
     volumes:
      - ./nginx:/etc/nginx/templates
     ports:
