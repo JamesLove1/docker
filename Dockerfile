@@ -8,14 +8,12 @@ RUN apt install python3.8 -y
 RUN apt install python3-pip -y
 RUN pip3 install --upgrade pip
 RUN pip3 install Django
-#RUN ls -l
+RUN
 
 #Creat Django App & start test servercd
-#RUN django-admin startproject myapp
-#RUN ls -l
-#RUN cd /myapp
-#RUN ls -l
-#RUN python manage.py runserver 0.0.0.0:8000
+RUN django-admin startproject myapp
+RUN cd /myapp
+RUN python manage.py runserver 0.0.0.0:8000
 
 # Web Service Gateway Interface Gunicorn install & set-up
 #RUN  apt-get install gunicorn -y
