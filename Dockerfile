@@ -15,7 +15,7 @@ RUN django-admin startproject myapp
 WORKDIR /django/myapp
 RUN chmod +x manage.py
 RUN python3 manage.py migrate
-COPY .django.txt ./
+ADD django.txt ./
 RUN chmod +x django.txt
 
 CMD ["/django.txt"]
