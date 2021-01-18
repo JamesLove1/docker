@@ -13,7 +13,7 @@ RUN
 #Creat Django App & start test servercd
 RUN django-admin startproject myapp
 RUN cd /myapp
-RUN python manage.py runserver 0.0.0.0:8000
+CMD python manage.py runserver 0.0.0.0:8000
 
 # Web Service Gateway Interface Gunicorn install & set-up
 #RUN  apt-get install gunicorn -y
