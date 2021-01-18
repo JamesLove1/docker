@@ -16,7 +16,7 @@ WORKDIR /django/myapp
 RUN chmod +x manage.py
 RUN python3 manage.py migrate
 ADD django.txt ./
-RUN chmod +x /django.txt
+RUN chmod +x ./django.txt
 
 CMD ["/django.txt"]
 
